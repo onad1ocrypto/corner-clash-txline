@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html, body {
+  height: 100%;
+  color: #1a1a2e;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #ff9ecd, #ffe66d, #a0e7ff, #ff9ecd);
+  background-size: 400% 400%;
+  animation: bgShift 15s ease infinite;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; position: relative; }
