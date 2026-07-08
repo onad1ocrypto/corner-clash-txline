@@ -22,7 +22,7 @@ export default function HiLoGame({ fixture, onBack }: { fixture: Fixture; onBack
   const [guess, setGuess] = useState<Guess>(null);
   const [baselineHome, setBaselineHome] = useState(0);
   const [baselineAway, setBaselineAway] = useState(0);
-  const [deadline, setDeadline] = useState<number | null>(null);
+  const [, setDeadline] = useState<number | null>(null);
   const [timeLeft, setTimeLeft] = useState(0);
   const [lastResult, setLastResult] = useState<RoundResult>(null);
   const [showConfetti, setShowConfetti] = useState(false);

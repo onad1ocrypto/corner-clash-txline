@@ -53,6 +53,7 @@ export function getTotalCorners(snapshot: ScoreSnapshot): number | null {
 
 // Selisih corner Home - Away. Bisa naik ATAU turun tergantung tim mana yang dapat corner berikutnya.
 export function getCornerBattle(snapshot: ScoreSnapshot, homeIsParticipant1: boolean): number | null {
+  if (!snapshot?.Stats) return null;
   const p1Corners = snapshot.Stats["7"] ?? 0;
   const p2Corners = snapshot.Stats["8"] ?? 0;
   return homeIsParticipant1 ? p1Corners - p2Corners : p2Corners - p1Corners;
